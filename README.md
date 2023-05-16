@@ -13,6 +13,8 @@ Implementado a partir da plataforma Vercel vinculada a este repositório no gith
 
 ## 🛠️ Construído com
 
+<strong>NodeJs v18.16.0</strong>
+
 <strong>Dependências:</strong>
 
 * [@prisma/client](https://www.npmjs.com/package/@prisma/client) - Utilizado para conexão ao Banco de Dados hospedado no MongoDB
