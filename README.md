@@ -13,7 +13,7 @@ Implementado a partir da plataforma Vercel vinculada a este repositório no gith
 
 ## 🛠️ Construído com
 
-*Dependências:*
+<strong>Dependências:</strong>
 
 * [@prisma/client](https://www.npmjs.com/package/@prisma/client) - Utilizado para conexão ao Banco de Dados hospedado no MongoDB
 * [express](https://www.npmjs.com/package/express) - Faz o papel de servidor.
@@ -22,7 +22,7 @@ Implementado a partir da plataforma Vercel vinculada a este repositório no gith
 * [uuid](https://www.npmjs.com/package/uuid) - Usada para gerar ID's aleatórios.
 * [bcrypt](https://www.npmjs.com/package/bcrypt) - Utilizado para criptografia de senhas.
 
-*Dependências de desenvolvimento: *
+<strong>Dependências de desenvolvimento:</strong>
 
 * [nodemon](https://www.npmjs.com/package/nodemon) - Utilizado para reiniciar o servidor sempre que algum arquivo é alterado.
 * [prisma](https://www.npmjs.com/package/prisma) - Utilizado para auxiliar a conexão com o banco de dados.
