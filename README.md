@@ -29,6 +29,6 @@ Dependências de desenvolvimento:
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/NeemiasVieira/To-Do-List-API/blob/master/README.md) para detalhes.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/NeemiasVieira/To-Do-List-API/blob/master/LICENSE) para detalhes.
 
 
