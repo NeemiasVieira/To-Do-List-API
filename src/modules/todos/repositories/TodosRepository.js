@@ -1,4 +1,4 @@
-import { Todo } from "../models/todo.js";
+import { Todo } from "../models/Todo.js";
 
 
 export class TodosRepository{
