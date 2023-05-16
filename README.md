@@ -1,6 +1,6 @@
 # To-Do-List-Api
 
-Essa é minha primeira API que já está em produção, que será utilizada futuramente numa aplicação Full Stack de Lista de Tarefas.
+Essa é minha primeira API em produção, que será utilizada futuramente numa aplicação Full Stack de Lista de Tarefas.
 
 ## ⚙️ Rotas disponíveis para testes da API.
 
