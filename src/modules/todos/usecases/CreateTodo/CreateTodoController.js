@@ -5,10 +5,10 @@ export class CreateTodoController {
     this.createTodoUseCase = new CreateTodoUseCase();
   }
 
-  handle(request, response){
+  async handle(request, response){
     const {description, username, done, deadline} = request.body;
 
-    const todo = this.createTodoUseCase.execute({description, username, done, deadline})
+    const todo = await this.createTodoUseCase.execute({description, username, done, deadline})
 
     response.status(201).json(todo);
   }

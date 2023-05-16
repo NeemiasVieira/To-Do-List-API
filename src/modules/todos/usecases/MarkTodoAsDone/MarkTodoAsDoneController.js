@@ -5,9 +5,10 @@ export class MarkTodoAsDoneController{
     this.markTodoAsDoneUseCase = new MarkTodoAsDoneUseCase();
   }
 
-  handle(request, response){
+  async handle(request, response){
     const {id} = request.params;
-    const todo = this.markTodoAsDoneUseCase.execute(id);
+    const todo = await this.markTodoAsDoneUseCase.execute(id);
+
     return response.status(200).json(todo);
   }
 }

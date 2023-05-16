@@ -1,26 +1,33 @@
 import { TodosRepository } from "../../repositories/TodosRepository.js";
 import { AppException } from "../../../../application/errors/AppException.js";
+import { prisma } from "../../../../database/PrismaClient.js";
 
 export class UpdateTodoByIdUseCase{
   constructor(){
     this.todosRepository = TodosRepository.getInstance();
   }
 
-  execute(id, description, deadline ){
-    const todo = this.todosRepository.FindById(id);
+  async execute(id, description, deadline ){
 
-    if(!todo){
-      throw new AppException(404, "To-Do not found.")
-    }
+    prisma.$connect();
 
     const [day, month, year] = deadline.split("/");
 
-    const updatedToDo = this.todosRepository.UpdateTodo({
-      id,
-      description,
-      deadline: new Date(year, month-1, day),
-    });
+    const todo = await prisma.todos.findUnique({where:{todoid: id}});
 
+    if(todo){
+    const updatedToDo = await prisma.todos.update({
+      where: { todoid: id },
+      data:{
+        description,
+        deadline: new Date(year, month-1, day),
+      },
+    });
+    prisma.$disconnect();
     return updatedToDo;
+  }
+
+  else throw new AppException(404, "Todo not found.")
+  
   }
 }
