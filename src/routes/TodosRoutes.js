@@ -4,9 +4,9 @@ import { findAllByUserController } from '../modules/todos/usecases/FindAllByUser
 import { deleteTodoByIdController } from '../modules/todos/usecases/DeleteTodoById/index.js';
 import { markTodoAsDoneController } from '../modules/todos/usecases/MarkTodoAsDone/index.js';
 import { updateTodoByIdController } from '../modules/todos/usecases/UpdateTodoById/index.js';
-
+import { ensureAuthentication } from '../middlewares/ensureAuthentication.js';
 //Resolve erros asincronos não tratados pelo Express
-export const asyncErrors = (handle) => { 
+const asyncErrors = (handle) => { 
   return (request, response, next) => {
     return Promise.resolve(handle(request, response, next))
     .catch(e => next(e));
@@ -20,7 +20,7 @@ todosRoutes.post("/", asyncErrors((request, response) => {
   return createTodoController.handle(request, response);
 }))
 
-todosRoutes.get("/:username", asyncErrors((request, response) => {
+todosRoutes.get("/", asyncErrors(ensureAuthentication), asyncErrors((request, response) => {
   return findAllByUserController.handle(request, response);
 }))
 

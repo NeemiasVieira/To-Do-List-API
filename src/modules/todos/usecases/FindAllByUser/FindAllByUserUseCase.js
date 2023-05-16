@@ -9,12 +9,12 @@ export class FindAllByUserUseCase {
     this.todosRepository = TodosRepository.getInstance();
   }
 
-  async execute(username) {
-    prisma.$connect();
+  async execute(user_id) {
+    await prisma.$connect();
 
     const user = await prisma.users.findUnique({
       where: {
-        username,
+        userid: user_id,
       },
     });
     if (!user) {
@@ -23,11 +23,11 @@ export class FindAllByUserUseCase {
 
     const todos = await prisma.todos.findMany({
       where: {
-        username,
+        username: user.username,
       },
     });
 
-    prisma.$disconnect();
+    await prisma.$disconnect();
 
     return todos;
   }

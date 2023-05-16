@@ -6,8 +6,8 @@ export class FindAllByUserController{
   }
   
   async handle(request, response){
-    const {username} = request.params;
-    const todos = await this.findAllByUserUseCase.execute(username);
+    const user_id = request.user.id; //Vem de middleware
+    const todos = await this.findAllByUserUseCase.execute(user_id);
 
     return response.json(todos);
 }
