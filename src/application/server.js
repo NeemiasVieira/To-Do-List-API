@@ -21,7 +21,8 @@ app.use((error, resquest, response, next ) => {
   })
 })
 
-app.listen(3333, () => {
+
+app.listen(process.env.PORT || 3333,"0.0.0.0", () => {
   console.log("🚀 Server is running on port 3333");
 });
 
