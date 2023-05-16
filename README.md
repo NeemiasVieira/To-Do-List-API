@@ -13,7 +13,7 @@ Implementado a partir da plataforma Vercel vinculada a este repositório no gith
 
 ## 🛠️ Construído com
 
-<strong>NodeJs v18.16.0</strong>
+<strong>NodeJs (v18.16.0) e MongoDB</strong>
 
 <strong>Dependências:</strong>
 
