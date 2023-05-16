@@ -3,7 +3,9 @@ import routes from "./routes.js";
 import "express-async-errors";
 import { AppException } from "./errors/AppException.js";
 
-// https://to-do-list-api-production.up.railway.app/
+
+// https://to-do-list-api-production.up.railway.app/    Railway
+// https://to-do-list-api-pink.vercel.app/              Vercel
 
 
 const app = express();
