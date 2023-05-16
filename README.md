@@ -2,11 +2,6 @@
 
 Essa é minha primeira API que já está em produção, que será utilizada futuramente numa aplicação Full Stack de Lista de Tarefas.
 
-## 🚀 Começando
-
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
-
-
 ## ⚙️ Rotas disponíveis para testes da API.
 
 Em breve as rotas estarão disponíveis aqui para consulta e testes.
@@ -31,7 +26,6 @@ Dependências de desenvolvimento:
 
 * [nodemon](https://www.npmjs.com/package/nodemon) - Utilizado para reiniciar o servidor sempre que algum arquivo é alterado.
 * [prisma](https://www.npmjs.com/package/prisma) - Utilizado para auxiliar a conexão com o banco de dados.
-
 
 ## 📄 Licença
 
