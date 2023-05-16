@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon ./src/application/server.js"
+    "start": "nodemon ./src/application/server.js",
+    "postinstall": "prisma generate"
   },
   "author": "Neemias Vieira",
   "license": "MIT",
