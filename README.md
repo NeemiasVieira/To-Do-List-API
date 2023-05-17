@@ -32,59 +32,59 @@ Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://gith
 
 <strong>Rotas de Usuários</strong>
 
-Função: Listar usuários cadastrados.
-Rota: https://to-do-list-api-pink.vercel.app/users
-Tipo de requisição: GET
-Retorna todos os usuários cadastrados no bd.
-
-Função: Criar usuário.
-Rota: https://to-do-list-api-pink.vercel.app/users
-Tipo de requisição: POST
-Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: name, username, email, password.
-retorna um objeto JSON contendo: id, created_at, email, name, password, userid, username.
-onde id é gerado pelo MongoDb
-
-<strong>Rotas de Tarefas</strong>
-
-Função: Criar tarefa.
-Rota: https://to-do-list-api-pink.vercel.app/todos
-Tipo de requisição: POST
-Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: description, deadline, done.
-obs: deadline no formato (dd/mm/aaaa).
-retorna um objeto JSON contendo: id, created_at, deadline, description, done, todoid, username.
-
-Função: Listar tarefas por usuário.
-Rota: https://to-do-list-api-pink.vercel.app/todos
-Tipo de requisição: GET
-Aguarda um Token Bearer
-retorna Todas as tarefas criadas pelo usuário autenticado
-
-Função: Deleta a tarefa pelo seu id.
-Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid
-Tipo de requisição: DELETE
-Aguarda um todoid nos parâmetros da requisição.
-retorna um status 204 (No content).
-
-Função: Marcar a tarefa como concluída.
-Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid
-Tipo de requisição: PATCH
-Aguarda um todoid nos parâmetros da requisição.
-retorna um objeto JSON contendo as informações da tarefa já com o done atualizado para true.
-
-Função: Atualizar tarefa pelo ID.
-Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid
-Tipo de requisição: PUT
-Aguarda um todoid nos parâmetros da requisição e as propiedades description e deadline no corpo da requisição.
-retorna um objeto JSON contendo as informações da tarefa atualizadas.
-
-<strong>Rotas de Autenticação</strong>
-
-Função: Login com usuário e senha.
-Rota: https://to-do-list-api-pink.vercel.app/sessions
-Tipo de requisição: POST
-Aguarda no corpo da requisição um objeto contendo username e password.
-retorna o token de autenticação e as propiedades name, username e email do objeto user.
-
+Função: Listar usuários cadastrados.<br>
+Rota: https://to-do-list-api-pink.vercel.app/users<br>
+Tipo de requisição: GET<br>
+Retorna todos os usuários cadastrados no bd.<br>
+<br><br>
+Função: Criar usuário.<br>
+Rota: https://to-do-list-api-pink.vercel.app/users<br>
+Tipo de requisição: POST<br>
+Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: name, username, email, password.<br>
+retorna um objeto JSON contendo: id, created_at, email, name, password, userid, username.<br>
+onde id é gerado pelo MongoDb<br>
+<br><br>
+<strong>Rotas de Tarefas</strong><br>
+<br><br>
+Função: Criar tarefa.<br>
+Rota: https://to-do-list-api-pink.vercel.app/todos<br>
+Tipo de requisição: POST<br>
+Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: description, deadline, done.<br>
+obs: deadline no formato (dd/mm/aaaa).<br>
+retorna um objeto JSON contendo: id, created_at, deadline, description, done, todoid, username.<br>
+<br><br>
+Função: Listar tarefas por usuário.<br>
+Rota: https://to-do-list-api-pink.vercel.app/todos<br>
+Tipo de requisição: GET<br>
+Aguarda um Token Bearer<br>
+retorna Todas as tarefas criadas pelo usuário autenticado<br>
+<br><br>
+Função: Deleta a tarefa pelo seu id.<br>
+Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid<br>
+Tipo de requisição: DELETE<br>
+Aguarda um todoid nos parâmetros da requisição.<br>
+retorna um status 204 (No content).<br>
+<br><br>
+Função: Marcar a tarefa como concluída.<br>
+Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid<br>
+Tipo de requisição: PATCH<br>
+Aguarda um todoid nos parâmetros da requisição.<br>
+retorna um objeto JSON contendo as informações da tarefa já com o done atualizado para true.<br>
+<br><br>
+Função: Atualizar tarefa pelo ID.<br>
+Rota: https://to-do-list-api-pink.vercel.app/todos/:todoid<br>
+Tipo de requisição: PUT<br>
+Aguarda um todoid nos parâmetros da requisição e as propiedades description e deadline no corpo da requisição.<br>
+retorna um objeto JSON contendo as informações da tarefa atualizadas.<br>
+<br><br>
+<strong>Rotas de Autenticação</strong><br>
+<br><br>
+Função: Login com usuário e senha.<br>
+Rota: https://to-do-list-api-pink.vercel.app/sessions<br>
+Tipo de requisição: POST<br>
+Aguarda no corpo da requisição um objeto contendo username e password.<br>
+retorna o token de autenticação e as propiedades name, username e email do objeto user.<br>
+<br><br>
 
 
 
