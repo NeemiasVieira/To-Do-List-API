@@ -1,6 +1,6 @@
 import Router from "express";
 import { authenticateUserController } from "../modules/users/usecases/AuthenticateUser/index.js";
-import { permission } from "../middlewares/cors.js";
+
 
 const AuthenticationRoutes = Router();
 
@@ -12,7 +12,6 @@ export const asyncErrors = (handle) => {
 }
 
 AuthenticationRoutes.post("/", asyncErrors((request, response) => {
-  permission(response);
   return authenticateUserController.handle(request, response);
 }))
 
