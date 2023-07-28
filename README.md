@@ -2,7 +2,7 @@
 
 Essa é minha primeira API em produção, que será utilizada futuramente numa aplicação Full Stack de Lista de Tarefas.
 
-## 📦 Implantação
+## 📦 Implementação
 
 Implementado a partir da plataforma Vercel vinculada a este repositório no github em: (https://to-do-list-api-pink.vercel.app)
 
