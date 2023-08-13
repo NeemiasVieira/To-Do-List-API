@@ -29,7 +29,7 @@ export class FindAllByUserUseCase {
 
     await prisma.$disconnect();
 
-    if (todos.length > 0) return todos;
+    if (todos.length > 0) return todos.reverse();
     else return [{username: user.username}];
   }
 }
