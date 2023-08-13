@@ -13,10 +13,20 @@ export class MarkTodoAsDoneUseCase {
     const todo = await prisma.todos.findUnique({ where: { todoid: id } });
 
     if (todo) {
-      const Updatedtodo = await prisma.todos.update({
-        where: { todoid: id },
-        data: { done: true },
-      });
+      let Updatedtodo;
+      if(todo.done){
+        Updatedtodo = await prisma.todos.update({
+          where: { todoid: id },
+          data: { done: false },
+        });
+      }
+      else{
+        Updatedtodo = await prisma.todos.update({
+          where: {todoid: id},
+          data: { done: true},
+        })
+      }
+      
       prisma.$disconnect();
       return Updatedtodo;
     } 
