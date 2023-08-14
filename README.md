@@ -49,7 +49,7 @@ onde id é gerado pelo MongoDb<br>
 Função: Criar tarefa.<br>
 Rota: https://to-do-list-api-pink.vercel.app/todos<br>
 Tipo de requisição: POST<br>
-Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: description, deadline, done.<br>
+Aguarda no corpo da requisição um objeto JSON contendo valores para as propiedades: description, username, deadline, done.<br>
 obs: deadline no formato (dd/mm/aaaa).<br>
 retorna um objeto JSON contendo: id, created_at, deadline, description, done, todoid, username.<br>
 <br>
